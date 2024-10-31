@@ -4,6 +4,7 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
         <script type="text/javascript" src="consumable.js"></script>
         <script type="text/javascript" src="food.js"></script>
+        <script type="text/javascript" src="drinks.js"></script>
         <script type="text/javascript" src="StatusTracker.js" defer></script>
     <style>
         @font-face {
@@ -95,8 +96,8 @@
                 <div class="col-xl">
                     <div class="actions-area">
                         <button class="health inline-block-child" id="heal-button">Heal</button>
-                        <button class="food inline-block-child" id="food-button">Food</button>
-                        <button class="drink inline-block-child" id="drink-button">Drink</button>
+                        <button class="food inline-block-child" id="food-button" onclick="togglePopup('popup-menu-food')">Food</button>
+                        <button class="drink inline-block-child" id="drink-button" onclick="togglePopup('popup-menu-drinks')">Drink</button>
                         <button class="sleep inline-block-child" id="sleep-button">Sleep</button>
                         <button class="fight inline-block-child" id="fight-button">Fight</button>
                     </div>
@@ -106,32 +107,11 @@
         <div class="container text-center">
             <div class="row align-items-start">
                 <div class="col-sm">
-                    <div class="popup-menu-food">
-                        <button onclick="consume('apple', allFood)">
-                            <img src = "icons/food/apple.svg" alt="Apple SVG" width="60" height="60"/>
-                        </button>
-                        <button onclick="consume('avocado', allFood)">
-                            <img src = "icons/food/avocado.svg" alt="Avocado SVG" width="60" height="60"/>
-                        </button>
-                        <button onclick="consume('bread', allFood)">
-                            <img src = "icons/food/bread.svg" alt="Bread SVG" width="60" height="60"/>
-                        </button>
-                        <button onclick="consume('burger', allFood)">
-                            <img src = "icons/food/burger.svg" alt="Burger SVG" width="60" height="60"/>
-                        </button>
-                        <button onclick="consume('carrot', allFood)">
-                            <img src = "icons/food/carrot.svg" alt="Carrot SVG" width="60" height="60"/>
-                        </button>
-                        <button onclick="consume('pear', allFood)">
-                            <img src = "icons/food/pear.svg" alt="Pear SVG" width="60" height="60"/>
-                        </button>
+                    <div class="popup-menu-food" hidden="true">
+                        <!-- Automatically populated in food.js -->
                     </div>
-                    <div class="popup-menu-drinks">
-                        <img src = "icons/drinks/beer.svg" alt="Beer SVG" width="60" height="60"/>
-                        <img src = "icons/drinks/coffee.svg" alt="Coffee SVG" width="60" height="60"/>
-                        <img src = "icons/drinks/milk.svg" alt="Milk SVG" width="60" height="60"/>
-                        <img src = "icons/drinks/soda.svg" alt="Soda SVG" width="60" height="60"/>
-                        <img src = "icons/drinks/tea.svg" alt="Tea SVG" width="60" height="60"/>
+                    <div class="popup-menu-drinks" hidden="true">
+                        <!-- Automatically populated in drinks.js -->
                     </div>
                 </div>
             </div>

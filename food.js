@@ -6,3 +6,21 @@ var carrot = new Consumable("carrot", 6, hungerChange=4);
 var pear = new Consumable("pear", 8, hungerChange=4);
 
 var allFood = [apple, avocado, bread, burger, carrot, pear];
+
+window.addEventListener('load', function() {
+    for(var foodIdx=0; foodIdx<allFood.length; foodIdx++) {
+        var button = document.createElement("button");
+        const foodName = allFood[foodIdx].name;
+        button.onclick = function() { consume(foodName, allFood) };
+    
+        var img = document.createElement("img");
+        img.src = "icons/food/" + foodName + ".svg";
+        img.alt = foodName + " SVG";
+        img.width="60";
+        img.height="60";
+    
+        button.appendChild(img);
+    
+        document.getElementsByClassName('popup-menu-food')[0].appendChild(button);
+    }
+});

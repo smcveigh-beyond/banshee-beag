@@ -20,8 +20,14 @@ const consume = function(consumableName, consumableOptions) {
             THIRST = THIRST + selected.thirstChange;
 
             updateStatusBars();
+            document.getElementsByClassName('popup-menu-food')[0].hidden = true;
+            document.getElementsByClassName('popup-menu-drinks')[0].hidden = true;
             return;
         }
     }
 }
 
+const togglePopup = function(className) {
+    var element = document.getElementsByClassName(className)[0];
+    element.hidden = !element.hidden;
+}

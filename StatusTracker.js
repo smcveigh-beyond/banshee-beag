@@ -13,7 +13,7 @@ const updateStatusBars = function() {
         "Thirst": THIRST,
     }
 
-    for (let i = 0; i < statusList.childElementCount; i++) {
+    for (let i = 0; i < Object.keys(statusMap).length; i++) {
         const text = Object.values(statusMap)[i] + "%";
         const id = Object.keys(statusMap)[i].toLowerCase() + "-status";
         document.getElementById(id).textContent = text;
