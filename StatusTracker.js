@@ -105,6 +105,17 @@ const updateCoins = function() {
     document.getElementById("coins").textContent = COINS + " Coins";
 }
 
+const decrementStatus = function() {
+    HEALTH -= 1;
+    ENERGY -= 1;
+    HUNGER -= 1;
+    THIRST -= 1;
+
+    updateStatusBars();
+}
+
 
 updateCoins();
 updateStatusBars();
+
+window.setInterval(decrementStatus, 10000);
