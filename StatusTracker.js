@@ -124,4 +124,4 @@ const decrementStatus = function() {
 updateCoins(0);
 updateStatusBars();
 
-window.setInterval(decrementStatus, 4000);
+window.setInterval(decrementStatus, 2000);
