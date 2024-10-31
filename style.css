@@ -5,12 +5,20 @@ body{
 }
 
 #banshee-beag {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: 150px;
 }
 
 .inline-block-child {
   display: inline-block;
+}
+
+.brown-border {
+  border: 5px solid brown; 
+  padding: 20px;           
+  margin: 20px;            
+  width: 500px;    
+  height: 500px;        
+  text-align: center;      
+  background-color: black; 
 }
