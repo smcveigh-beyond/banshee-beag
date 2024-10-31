@@ -8,3 +8,20 @@ class Consumable {
         this.thirstChange = thirstChange;
     }
 }
+
+const consume = function(consumableName, consumableOptions) {
+    for(let i=0; i<consumableOptions.length; i++) {
+        if(consumableOptions[i].name === consumableName) {
+            var selected = consumableOptions[i];
+
+            HEALTH = HEALTH + selected.healthChange;
+            ENERGY = ENERGY + selected.energyChange;
+            HUNGER = HUNGER + selected.hungerChange;
+            THIRST = THIRST + selected.thirstChange;
+
+            updateStatusBars();
+            return;
+        }
+    }
+}
+
