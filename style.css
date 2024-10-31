@@ -2,6 +2,7 @@ body{
   margin-top: 50px;
   background-color: black;
   color: white;
+  font-family: itim;
 }
 
 #banshee-beag {
@@ -44,24 +45,24 @@ p {
     color: white;
     padding: 1%;
     text-align: center;
-    font-size: 20px;
+    font-size: 40px;
     border-radius: 15px;
 }
 
 .status-health {
-    width: 300%;
+    width: 500%;
 }
 
 .status-energy {
-    width: 300%;
+    width: 500%;
 }
 
 .status-hunger {
-    width: 300%;
+    width: 500%;
 }
 
 .status-thirst {
-    width: 300%;
+    width: 500%;
 }
 
 .status{
@@ -69,5 +70,10 @@ p {
  align-items: center;
  grid-template-columns: 1fr 1fr 1fr;
  column-gap: 5px;
+ }
+
+ h1{
+ text-align: center;
+ font-size: 80px;
  }
 
