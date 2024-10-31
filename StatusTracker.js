@@ -3,22 +3,23 @@ let ENERGY = 100;
 let HUNGER = 100;
 let THIRST = 100;
 
-const updateStatusBars = function() {
 let statusList = document.getElementById("status-list");
 
+const updateStatusBars = function(health, energy, hunger, thirst) {
     let statusMap = {
-        "Health": HEALTH,
-        "Energy": ENERGY,
-        "Hunger": HUNGER,
-        "Thirst": THIRST,
+        "Health": health,
+        "Energy": energy,
+        "Hunger": hunger,
+        "Thirst": thirst,
     }
-    
+
     for (let i = 0; i < statusList.childElementCount; i++) {
-        const element = document.createElement("p");
-        const text = document.createTextNode(Object.keys(statusMap)[i] + " : " + Object.values(statusMap)[i]);
-        element.appendChild(text)
-        statusList.children[i].appendChild(element);
-    }    
+        const text = Object.keys(statusMap)[i] + " : " + Object.values(statusMap)[i];
+        const id = Object.keys(statusMap)[i].toLowerCase() + "-status";
+        document.getElementById(id).textContent = text;
+    } 
 }
 
-updateStatusBars();
+updateStatusBars(HEALTH, ENERGY, HUNGER, THIRST);
+
+
