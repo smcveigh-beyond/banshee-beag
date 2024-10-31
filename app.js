@@ -1,5 +1,5 @@
 anime({
-    targets: '#banshee-beag',
+    targets: '#banshee-beag, .thought-bubble',
     translateY: [0, 20],          
     direction: 'alternate',       
     easing: 'easeInOutSine',      
