@@ -56,7 +56,7 @@ const meterCheckPrompt = function(meterValue, meterType){
     } else if (meterValue > 20 && meterValue <= 40) {
         thoughtBubbleText.textContent += promptsList[index+3]; 
     } else if (meterValue <= 20) {
-        thoughtBubbleText.textContent += promptsList[promptsList.length]; 
+        thoughtBubbleText.textContent += promptsList[promptsList.length - 1]; 
     }
 }
 
