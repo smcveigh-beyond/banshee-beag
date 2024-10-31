@@ -14,13 +14,13 @@ body{
 }
 
 .brown-border {
-  border: 5px solid brown; 
-  padding: 20px;           
-  margin: 20px;            
-  width: 500px;    
-  height: 500px;        
-  text-align: center;      
-  background-color: black; 
+  border: 5px solid brown;
+  padding: 20px;
+  margin: 20px;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  background-color: black;
 }
 
 .coin-img {
@@ -28,3 +28,33 @@ body{
   height: 100px;
   width: 100px;
 }
+
+p {
+    font-size: 20px;
+}
+
+.skill {
+    background-color: rgb(116, 194, 92);
+    color: white;
+    padding: 1%;
+    text-align: right;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.status-health {
+    width: 60%;
+}
+
+.status-energy {
+    width: 100%;
+}
+
+.status-hunger {
+    width: 20%;
+}
+
+.status-thirst {
+    width: 80%;
+}
+
