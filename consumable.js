@@ -66,5 +66,14 @@ const consume = function(consumableName, consumableOptions) {
 
 const togglePopup = function(className) {
     var element = document.getElementsByClassName(className)[0];
+    var isCurrentlyHidden = element.hidden;
+
+    if(isCurrentlyHidden) {
+        var popups = document.getElementsByClassName('popup');
+        for(var popupIdx=0; popupIdx<popups.length; popupIdx++) {
+            popups[popupIdx].hidden = true;
+        }
+    }
+    
     element.hidden = !element.hidden;
 }

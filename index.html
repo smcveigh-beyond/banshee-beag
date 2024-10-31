@@ -6,6 +6,7 @@
         <script type="text/javascript" src="food.js"></script>
         <script type="text/javascript" src="drinks.js"></script>
         <script type="text/javascript" src="medicine.js"></script>
+        <script type="text/javascript" src="sleep.js"></script>
         <script type="text/javascript" src="StatusTracker.js" defer></script>
     <style>
         @font-face {
@@ -94,7 +95,7 @@
                         <button class="health inline-block-child" id="heal-button" onclick="togglePopup('popup-menu-medicine')">Heal</button>
                         <button class="food inline-block-child" id="food-button" onclick="togglePopup('popup-menu-food')">Food</button>
                         <button class="drink inline-block-child" id="drink-button" onclick="togglePopup('popup-menu-drinks')">Drink</button>
-                        <button class="sleep inline-block-child" id="sleep-button">Sleep</button>
+                        <button class="sleep inline-block-child" id="sleep-button" onclick="togglePopup('popup-menu-sleep')">Sleep</button>
                         <button class="fight inline-block-child" id="fight-button">Fight</button>
                     </div>
                 </div>
@@ -111,6 +112,9 @@
                     </div>
                     <div class="popup-menu-medicine popup" hidden="true">
                         <!-- Automatically populated in medicine.js -->
+                    </div>
+                    <div class="popup-menu-sleep popup" hidden="true">
+                        <!-- Automatically populated in sleep.js -->
                     </div>
                 </div>
             </div>
