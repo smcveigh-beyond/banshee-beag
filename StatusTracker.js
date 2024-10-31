@@ -113,6 +113,10 @@ const decrementStatus = function() {
     HUNGER -= 4;
     THIRST -= 3;
 
+    if(HEALTH <= 0 || ENERGY <= 0 || HUNGER <= 0 || THIRST <= 0) {
+        window.location.href = "game-over.html";
+    }
+
     updateStatusBars();
 }
 

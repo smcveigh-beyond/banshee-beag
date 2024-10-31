@@ -84,3 +84,7 @@ p {
  font-size: 80px;
  }
 
+ a {
+  display: block;
+  width: 100%;
+ }
