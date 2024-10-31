@@ -12,3 +12,7 @@ body{
     content: justify;
     align-items: center;
 }
+
+.inline-block-child {
+  display: inline-block;
+}
