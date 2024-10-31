@@ -15,6 +15,13 @@ body{
   bottom: 230px;
 }
 
+#sword {
+  width: 150px; 
+  position: absolute;
+  top: 200px;
+  z-index: 1;
+}
+
 .inline-block-child {
   display: inline-block;
 }
