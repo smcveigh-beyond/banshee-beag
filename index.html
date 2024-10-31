@@ -1,23 +1,46 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
-        <div class="app">
-            <div class="money">100 coins</div>
-            <div class="sprite">Character goes here</div>
-            <div class="status-area">
-                <div class="status-bar">Health: 100</div>
-                <div class="status-bar">Energy: 87</div>
-                <div class="status-bar">Hunger: 66</div>
-                <div class="status-bar">Thirst: 92</div>
-            <div class="actions-area">
-                <div class="health">Heal</div>
-                <div class="food">Food</div>
-                <div class="drink">Drink</div>
-                <div class="sleep">Sleep</div>
-                <div class="fight">Fight</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    One of three columns
+                    <div class="money">100 coins</div>
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                    <div class="sprite">Character goes here</div>
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                    <div class="status-area">
+                        <div class="status-bar">Health: 100
+                            <img src="icons/heart.svg" alt="heart" width="60" height="60">
+                        </div>
+                        <div class="status-bar">Energy: 87
+                            <img src="icons/sleep.svg" alt="sleep" width="60" height="60">
+                        </div>
+                        <div class="status-bar">Hunger: 66
+                            <img src="icons/apple.svg" alt="apple" width="60" height="60">
+                        </div>
+                        <div class="status-bar">Thirst: 92
+                            <img src="icons/drink.svg" alt="drink" width="60" height="60">
+                        </div>
+                    </div>
+                </div>
             </div>
+                <div class="row">
+                    <div class="actions-area">
+                    <div class="health">Heal</div>
+                    <div class="food">Food</div>
+                    <div class="drink">Drink</div>
+                    <div class="sleep">Sleep</div>
+                    <div class="fight">Fight</div>
+                    </div>
+                </div>
         </div>
     </body>
 </html>
