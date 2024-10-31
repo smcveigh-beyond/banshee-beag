@@ -49,7 +49,7 @@ p {
 }
 
 .status-health {
-    width: 60%;
+    width: 100%;
 }
 
 .status-energy {
@@ -57,10 +57,17 @@ p {
 }
 
 .status-hunger {
-    width: 20%;
+    width: 100%;
 }
 
 .status-thirst {
-    width: 80%;
+    width: 100%;
 }
+
+.status{
+ display: grid;
+ align-items: center;
+ grid-template-columns: 1fr 1fr 1fr;
+ column-gap: 5px;
+ }
 

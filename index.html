@@ -50,25 +50,34 @@
                         </svg>
                     </div>
                 </div>
-                <div class="col-sm">
+                <div class="col-sm" style="display: flex;">
                     <div class="status-area" id="status-list">
-                        <img src="icons/heart.svg" alt="heart" width="60" height="60"
-                             style="float: left;">
-                        <div class="status-health skill" style="display: inline-block;">
+                        <div class="status">
+                        <img src="icons/heart.svg" alt="heart" width="60" height="60">
+                        <div class="status-health skill">
                             <p id="health-status"></p>
                         </div>
+                        </div>
                         <br>
+                        <div class="status">
                         <img src="icons/sleep.svg" alt="sleep" width="60" height="60">
-                        <div class="status-energy skill" style="display: inline-block;">
+                        <div class="status-energy skill">
                             <p id="energy-status"></p>
                         </div>
+                        </div>
+                        <br>
+                        <div class="status">
                         <img src="icons/food.svg" alt="food" width="60" height="60">
                         <div class="status-hunger skill">
                             <p id="hunger-status"></p>
                         </div>
+                        </div>
+                        <br>
+                        <div class="status">
                         <img src="icons/drink.svg" alt="drink" width="60" height="60">
-                        <div class="status-thirst skill" id="thirst-status">
+                        <div class="status-thirst skill">
                             <p id="thirst-status"></p>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -121,8 +130,9 @@
             </div>
         </div>
 
-        </div class="container text-center">
+        <div class="container text-center">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
         <script src="app.js"></script>
+        </div>
     </body>
 </html>
