@@ -1,5 +1,6 @@
 body{
   margin-top: 50px;
+  margin-right: 200px;
   background-color: black;
   color: white;
   font-family: itim;
@@ -56,19 +57,19 @@ p {
 }
 
 .status-health {
-    width: 500%;
+    width: 200%;
 }
 
 .status-energy {
-    width: 500%;
+    width: 200%;
 }
 
 .status-hunger {
-    width: 500%;
+    width: 200%;
 }
 
 .status-thirst {
-    width: 500%;
+    width: 200%;
 }
 
 .status{

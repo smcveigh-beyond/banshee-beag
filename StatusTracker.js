@@ -43,7 +43,7 @@ const meterCheckPrompt = function(meterValue, meterType){
     switch(meterType){
         case "energy": index += 4; break;
         case "hunger": index += 8;  break;
-        case "thirst": index += 16; break;
+        case "thirst": index += 12; break;
     }
 
     if(meterValue >= 80){
@@ -96,8 +96,10 @@ const updateStatusBars = function() {
     for (let i = 0; i < Object.keys(statusMap).length; i++) {
         const text = values[i] + "%";
         const id = keys[i].toLowerCase() + "-status";
+        const newWidth = (values[i]/100) * 200;
         document.getElementById(id).textContent = text;
-    } 
+        document.getElementById(id).setAttribute("style","width: " + newWidth);
+    }
     
 }
 
@@ -107,9 +109,9 @@ const updateCoins = function() {
 
 const decrementStatus = function() {
     HEALTH -= 1;
-    ENERGY -= 1;
-    HUNGER -= 1;
-    THIRST -= 1;
+    ENERGY -= 2;
+    HUNGER -= 4;
+    THIRST -= 3;
 
     updateStatusBars();
 }
@@ -118,4 +120,4 @@ const decrementStatus = function() {
 updateCoins();
 updateStatusBars();
 
-window.setInterval(decrementStatus, 10000);
+window.setInterval(decrementStatus, 4000);
