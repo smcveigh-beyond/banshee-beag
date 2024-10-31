@@ -5,11 +5,6 @@
         <script type="text/javascript" src="consumable.js"></script>
         <script type="text/javascript" src="food.js"></script>
         <script type="text/javascript" src="StatusTracker.js" defer></script>
-        <script>
-            window.onload = function() {
-            consume("apple", allFood);
-            };
-        </script>
     </head>
     <body>
         <div class="container">
@@ -71,23 +66,23 @@
             <div class="row align-items-start">
                 <div class="col-sm">
                     <div class="popup-menu-food">
-                        <button>
+                        <button onclick="consume('apple', allFood)">
                             <img src = "icons/food/apple.svg" alt="Apple SVG" width="60" height="60"/>
                         </button>
-                        <button>
+                        <button onclick="consume('avocado', allFood)">
                             <img src = "icons/food/avocado.svg" alt="Avocado SVG" width="60" height="60"/>
                         </button>
-                        <button>
+                        <button onclick="consume('bread', allFood)">
                             <img src = "icons/food/bread.svg" alt="Bread SVG" width="60" height="60"/>
                         </button>
-                        <button>
+                        <button onclick="consume('burger', allFood)">
                             <img src = "icons/food/burger.svg" alt="Burger SVG" width="60" height="60"/>
                         </button>
-                        <button>
+                        <button onclick="consume('carrot', allFood)">
                             <img src = "icons/food/carrot.svg" alt="Carrot SVG" width="60" height="60"/>
                         </button>
-                        <button>
-                            <img src = "icons/food/Pear.svg" alt="Pear SVG" width="60" height="60"/>
+                        <button onclick="consume('pear', allFood)">
+                            <img src = "icons/food/pear.svg" alt="Pear SVG" width="60" height="60"/>
                         </button>
                     </div>
                     <div class="popup-menu-drinks">
