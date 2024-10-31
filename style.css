@@ -5,12 +5,10 @@ body{
 }
 
 #banshee-beag {
-    height: 200px;
-    width: 200px;
-    background-image: url('sprites/ghost.gif');
-    display: flex;
-    content: justify;
-    align-items: center;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .inline-block-child {
