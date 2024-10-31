@@ -88,3 +88,65 @@ p {
   display: block;
   width: 100%;
  }
+ .health{
+   background-color: DeepSkyBlue;
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   border-radius: 20px;
+   text-align: center;
+   font-size: 30px;
+   text-decoration: none;
+   display: inline-block;
+ }
+
+ .food{
+  background-color: DeepPink;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+ }
+
+ .drink{
+  background-color: GreenYellow;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+ }
+
+ .sleep{
+  background-color: Gold;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+ }
+
+ .fight{
+    background-color: BlueViolet;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+ }
+
+
+
