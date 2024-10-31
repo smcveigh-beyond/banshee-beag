@@ -96,8 +96,10 @@ const updateStatusBars = function() {
     for (let i = 0; i < Object.keys(statusMap).length; i++) {
         const text = values[i] + "%";
         const id = keys[i].toLowerCase() + "-status";
+        const newWidth = (values[i]/100) * 200;
         document.getElementById(id).textContent = text;
-    } 
+        document.getElementById(id).setAttribute("style","width: " + newWidth);
+    }
     
 }
 
