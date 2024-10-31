@@ -4,7 +4,7 @@ let HUNGER = 100;
 let THIRST = 100;
 
 const updateStatusBars = function() {
-    let statusList = document.getElementById("status-list");
+let statusList = document.getElementById("status-list");
 
     let statusMap = {
         "Health": HEALTH,
