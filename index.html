@@ -5,6 +5,7 @@
         <script type="text/javascript" src="consumable.js"></script>
         <script type="text/javascript" src="food.js"></script>
         <script type="text/javascript" src="drinks.js"></script>
+        <script type="text/javascript" src="medicine.js"></script>
         <script type="text/javascript" src="StatusTracker.js" defer></script>
     <style>
         @font-face {
@@ -90,7 +91,7 @@
             <div class="row align-items-start">
                 <div class="col-xl">
                     <div class="actions-area">
-                        <button class="health inline-block-child" id="heal-button">Heal</button>
+                        <button class="health inline-block-child" id="heal-button" onclick="togglePopup('popup-menu-medicine')">Heal</button>
                         <button class="food inline-block-child" id="food-button" onclick="togglePopup('popup-menu-food')">Food</button>
                         <button class="drink inline-block-child" id="drink-button" onclick="togglePopup('popup-menu-drinks')">Drink</button>
                         <button class="sleep inline-block-child" id="sleep-button">Sleep</button>
@@ -102,11 +103,14 @@
         <div class="container text-center">
             <div class="row align-items-start">
                 <div class="col-sm">
-                    <div class="popup-menu-food" hidden="true">
+                    <div class="popup-menu-food popup" hidden="true">
                         <!-- Automatically populated in food.js -->
                     </div>
-                    <div class="popup-menu-drinks" hidden="true">
+                    <div class="popup-menu-drinks popup" hidden="true">
                         <!-- Automatically populated in drinks.js -->
+                    </div>
+                    <div class="popup-menu-medicine popup" hidden="true">
+                        <!-- Automatically populated in medicine.js -->
                     </div>
                 </div>
             </div>

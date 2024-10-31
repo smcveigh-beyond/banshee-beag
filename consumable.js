@@ -54,8 +54,11 @@ const consume = function(consumableName, consumableOptions) {
                 updateCoins();
             }
             
-            document.getElementsByClassName('popup-menu-food')[0].hidden = true;
-            document.getElementsByClassName('popup-menu-drinks')[0].hidden = true;
+            var popups = document.getElementsByClassName('popup');
+            for(var popupIdx=0; popupIdx<popups.length; popupIdx++) {
+                popups[popupIdx].hidden = true;
+            }
+
             return;
         }
     }
