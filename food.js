@@ -1,9 +1,9 @@
-var apple = new Consumable("apple", 10, energyChange=1, hungerChange=5, thirstChange=-1);
-var avocado = new Consumable("avocado", 20, energyChange=5, hungerChange=5);
-var bread = new Consumable("bread", 5, hungerChange=3);
-var burger = new Consumable("burger", 12, energyChange=-5, hungerChange=10, thirstChange=-2);
-var carrot = new Consumable("carrot", 6, hungerChange=4);
-var pear = new Consumable("pear", 8, hungerChange=4);
+var apple = new ConsumableBuilder("apple", 10).setHealthChange(2).setEnergyChange(1).setHungerChange(5).setThirstChange(1).build();
+var avocado = new ConsumableBuilder("avocado", 20).setEnergyChange(5).setHungerChange(5).build();
+var bread = new ConsumableBuilder("bread", 5).setHungerChange(3).build();
+var burger = new ConsumableBuilder("burger", 12).setEnergyChange(-5).setHungerChange(10).setThirstChange(-2).build();
+var carrot = new ConsumableBuilder("carrot", 6).setHealthChange(1).setHungerChange(4).build();
+var pear = new ConsumableBuilder("pear", 8).setHungerChange(4).build();
 
 var allFood = [apple, avocado, bread, burger, carrot, pear];
 

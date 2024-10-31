@@ -1,8 +1,8 @@
-var beer = new Consumable("beer", 20, energyChange=-1, thirstChange=8);
-var coffee = new Consumable("coffee", 15, energyChange=10, thirstChange=3);
-var milk = new Consumable("milk", 5, thirstChange=5);
-var soda = new Consumable("soda", 8, energyChange=2, thirstChange=3);
-var tea = new Consumable("tea", 10, energyChange=3, thirstChange=5);
+var beer = new ConsumableBuilder("beer", 20).setHealthChange(-10).setThirstChange(8).build();
+var coffee = new ConsumableBuilder("coffee", 15).setHealthChange(-5).setEnergyChange(5).setThirstChange(5).build();
+var milk = new ConsumableBuilder("milk", 5).setHealthChange(2).setThirstChange(5).build();
+var soda = new ConsumableBuilder("soda", 8).setHealthChange(-1).setEnergyChange(2).setThirstChange(3).build();
+var tea = new ConsumableBuilder("tea", 10).setEnergyChange(3).setThirstChange(3).build();
 
 var allDrinks = [beer, coffee, milk, soda, tea];
 

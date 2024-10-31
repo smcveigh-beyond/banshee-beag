@@ -1,11 +1,41 @@
 class Consumable {
-    constructor(name, cost, healthChange=0, energyChange=0, hungerChange=0, thirstChange=0) {
+    constructor(name, cost) {
         this.name = name;
         this.cost = cost;
-        this.healthChange = healthChange;
-        this.energyChange = energyChange;
-        this.hungerChange = hungerChange;
-        this.thirstChange = thirstChange;
+        this.healthChange = 0;
+        this.energyChange = 0;
+        this.hungerChange = 0;
+        this.thirstChange = 0;
+    }
+}
+
+class ConsumableBuilder {
+    constructor(name, cost) {
+        this.consumable = new Consumable(name, cost);
+    }
+
+    setHealthChange(healthChange) {
+        this.consumable.healthChange = healthChange;
+        return this;
+    }
+
+    setEnergyChange(energyChange) {
+        this.consumable.energyChange = energyChange;
+        return this;
+    }
+
+    setHungerChange(hungerChange) {
+        this.consumable.hungerChange = hungerChange;
+        return this;
+    }
+
+    setThirstChange(thirstChange) {
+        this.consumable.thirstChange = thirstChange;
+        return this;
+    }
+
+    build() {
+        return this.consumable;
     }
 }
 
@@ -14,12 +44,16 @@ const consume = function(consumableName, consumableOptions) {
         if(consumableOptions[i].name === consumableName) {
             var selected = consumableOptions[i];
 
-            HEALTH = HEALTH + selected.healthChange;
-            ENERGY = ENERGY + selected.energyChange;
-            HUNGER = HUNGER + selected.hungerChange;
-            THIRST = THIRST + selected.thirstChange;
-
-            updateStatusBars();
+            if(COINS >= selected.cost) {
+                HEALTH = Math.min(100, HEALTH + selected.healthChange);
+                ENERGY = Math.min(100, ENERGY + selected.energyChange);
+                HUNGER = Math.min(100, HUNGER + selected.hungerChange);
+                THIRST = Math.min(100, THIRST + selected.thirstChange);
+                COINS = COINS - selected.cost;
+                updateStatusBars();
+                updateCoins();
+            }
+            
             document.getElementsByClassName('popup-menu-food')[0].hidden = true;
             document.getElementsByClassName('popup-menu-drinks')[0].hidden = true;
             return;
