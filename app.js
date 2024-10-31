@@ -49,10 +49,6 @@ const GhostJump = function(){
     });
 
 }
-
-//random sword attack
-setTimeout(() => {
-    randomSwordAttack()
-}, 5000); 
+ 
 
   
