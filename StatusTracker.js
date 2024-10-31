@@ -103,8 +103,8 @@ const updateStatusBars = function() {
     
 }
 
-const updateCoins = function() {
-    document.getElementById("coins").textContent = COINS + " Coins";
+const updateCoins = function(coins) {
+    document.getElementById("coins").textContent = (COINS + coins) + " Coins";
 }
 
 const decrementStatus = function() {
@@ -117,7 +117,7 @@ const decrementStatus = function() {
 }
 
 
-updateCoins();
+updateCoins(0);
 updateStatusBars();
 
 window.setInterval(decrementStatus, 4000);

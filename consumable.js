@@ -51,7 +51,7 @@ const consume = function(consumableName, consumableOptions) {
                 THIRST = Math.min(100, THIRST + selected.thirstChange);
                 COINS = COINS - selected.cost;
                 updateStatusBars();
-                updateCoins();
+                updateCoins(0);
             }
             
             var popups = document.getElementsByClassName('popup');

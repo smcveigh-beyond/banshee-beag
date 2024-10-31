@@ -38,6 +38,7 @@ const randomSwordAttack = function (){
         },
         delay: 250 
       });
+      updateCoins(20);
 }
 
 const GhostJump = function(){
