@@ -19,7 +19,7 @@ const consume = function(consumableName, consumableOptions) {
             HUNGER = HUNGER + selected.hungerChange;
             THIRST = THIRST + selected.thirstChange;
 
-            updateStatusBars(HEALTH, ENERGY, HUNGER, THIRST);
+            updateStatusBars();
             return;
         }
     }
