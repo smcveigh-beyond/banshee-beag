@@ -34,7 +34,6 @@ var prompts = {
 };
 
 const meterCheckPrompt = function(meterValue, meterType){
-    alert("hello")
     let promptsList = [prompts.health80, prompts.health60, prompts.health40, prompts.health20,
         prompts.energy80, prompts.energy60, prompts.energy40, prompts.energy20,
         prompts.hunger80, prompts.hunger60, prompts.hunger40, prompts.hunger20,
@@ -48,16 +47,16 @@ const meterCheckPrompt = function(meterValue, meterType){
     }
 
     if(meterValue >= 80){
-        thoughtBubbleText.textContent = promptsList[index];
+        thoughtBubbleText.textContent += promptsList[index];
     }
     else if (meterValue > 60 && meterValue < 80) {
-        thoughtBubbleText.textContent = promptsList[index+1]; 
+        thoughtBubbleText.textContent += promptsList[index+1]; 
     } else if (meterValue > 40 && meterValue <= 60) {
-        thoughtBubbleText.textContent = promptsList[index+2]; 
+        thoughtBubbleText.textContent += promptsList[index+2]; 
     } else if (meterValue > 20 && meterValue <= 40) {
-        thoughtBubbleText.textContent = promptsList[index+3]; 
+        thoughtBubbleText.textContent += promptsList[index+3]; 
     } else if (meterValue <= 20) {
-        thoughtBubbleText.textContent = promptsList[promptsList.length]; 
+        thoughtBubbleText.textContent += promptsList[promptsList.length]; 
     }
 }
 
@@ -69,10 +68,27 @@ const updateStatusBars = function() {
         "Thirst": THIRST,
     }
 
-    meterCheckPrompt(health, "health");
-    meterCheckPrompt(energy, "energy");
-    meterCheckPrompt(hunger, "hunger");
-    meterCheckPrompt(thirst, "thirst");
+    const health = HEALTH;
+    const energy = ENERGY;
+    const hunger = HUNGER;
+    const thirst = THIRST;
+
+    const min = Math.min(health, energy, hunger, thirst);
+    //reseting text
+    thoughtBubbleText.textContent = "";
+
+    if(min == health){
+        meterCheckPrompt(HEALTH, "health")
+    }
+    else if(min == energy){
+        meterCheckPrompt(ENERGY, "energy")
+    }
+    else if(min == hunger){
+        meterCheckPrompt(HUNGER, "hunger")
+    }
+    else {
+        meterCheckPrompt(THIRST, "thirst")
+    }
 
     const values = Object.values(statusMap);
     const keys = Object.keys(statusMap);
