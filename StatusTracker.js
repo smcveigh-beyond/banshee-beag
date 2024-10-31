@@ -14,7 +14,7 @@ const updateStatusBars = function() {
     }
 
     for (let i = 0; i < statusList.childElementCount; i++) {
-        const text = Object.keys(statusMap)[i] + " : " + Object.values(statusMap)[i];
+        const text = Object.values(statusMap)[i] + "%";
         const id = Object.keys(statusMap)[i].toLowerCase() + "-status";
         document.getElementById(id).textContent = text;
     } 
